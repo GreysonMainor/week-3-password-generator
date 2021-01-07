@@ -2,7 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword(makeItWork) {
+function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
@@ -11,7 +11,7 @@ var lowercaseChar = "abcdefghijklmnopqrstuvwxyz"
 var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXTZ"
 var specialChar = "~!%^&*<>"
 var numbersChar = "1234567890"
-var randomPassword;
+var randomPassword = "";
 var passGen = "";
 
 function generatePassword() {
@@ -60,9 +60,15 @@ function generatePassword() {
   console.log(passGen);
   console.log(passwordLength);
 
+for (i=0; i<passwordLength; i++){
+randomPassword += passGen.charAt(Math.floor(Math.random()*passGen.length))
+}
 
+console.log(randomPassword);
+
+return randomPassword;
 
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", generatePassword);
+generateBtn.addEventListener("click", writePassword);
