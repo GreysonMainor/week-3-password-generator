@@ -22,12 +22,30 @@ function generatePassword() {
   var uppercase = confirm("Do you want uppercase letters in your password?")
   if (uppercase) {
     alert("adding uppercase letters to the password.")
-  }
-  else {
+  }else {
     alert("No uppercase letters will be added.")
   }
 
-  var lowercase = confirm
+  var lowercase = confirm ("Do you want lowercase letters in your password?")
+  if (lowercase){
+alert("adding lowercase letters to your password.")
+  }else {
+    alert ("No lowercase letters will be added.")
+  }
+
+  var special = confirm ("do you want special characters in your password?")
+  if (special){
+    alert("adding special characters to your password.")
+  } else{
+    alert ("No special characters will be added to your password.")
+  }
+
+  var numbers = confirm ("do you want numbers in your password?")
+  if (numbers){
+    alert("adding numbers to your password.")
+  }else{
+    alert ("no numbers will be added to your password.")
+  }
 }
 for (var i = 0; n = characterSet.length i < passwordLength; i++) {
 retVal += characterSet.[Math.floor(Math.random)]
