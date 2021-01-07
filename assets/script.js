@@ -9,7 +9,7 @@ function writePassword(makeItWork) {
 }
 var characterSet = ("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!&%,*.-~<>")
 var randomPassword;
-var retVal = "";
+var passGen = "";
 
 function generatePassword() {
   var passwordLength = prompt("Your Password must greater than 8 characters and no more than 128. Please choose your character number.");
@@ -46,9 +46,14 @@ alert("adding lowercase letters to your password.")
   }else{
     alert ("no numbers will be added to your password.")
   }
+
+  console.log(uppercase)
+  console.log(lowercase)
+  console.log(special)
+  console.log(numbers)
 }
 for (var i = 0; n = characterSet.length i < passwordLength; i++) {
-retVal += characterSet.[Math.floor(Math.random)]
+passGen += characterSet.[Math.floor(Math.random)]
 }
 
 // Add event listener to generate button
