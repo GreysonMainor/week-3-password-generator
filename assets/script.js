@@ -1,5 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var refreshBtn = document.querySelector("#refresh")
 
 // Write password to the #password input
 function writePassword() {
@@ -65,7 +66,7 @@ function generatePassword() {
   console.log(passwordLength);
   console.log(randomPassword);
 
-  //for function that actually adds all of my appropriate characters together at random
+  //for function that actually adds all of my appropriate characters together at
 for (i=0; i<passwordLength; i++){
 randomPassword += passGen.charAt(Math.floor(Math.random()*passGen.length))
 }
@@ -73,7 +74,11 @@ randomPassword += passGen.charAt(Math.floor(Math.random()*passGen.length))
 return randomPassword;
 
 }
+function refreshPage(){
+  location.reload()
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+refreshBtn.addEventListener("click", refreshPage)
