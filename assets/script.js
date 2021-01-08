@@ -4,8 +4,8 @@ var refreshBtn = document.querySelector("#refresh")
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
   var passwordText = document.querySelector("#password");
+  var password = generatePassword();
   passwordText.value = password;
 }
 
@@ -67,18 +67,17 @@ function generatePassword() {
   console.log(randomPassword);
 
   //for function that actually adds all of my appropriate characters together at
-for (i=0; i<passwordLength; i++){
-randomPassword += passGen.charAt(Math.floor(Math.random()*passGen.length))
-}
+  randomPassword = ""
+  
+  for (i = 0; i < passwordLength; i++) {
+    randomPassword += passGen.charAt(Math.floor(Math.random() * passGen.length))
+  }
 
-return randomPassword;
+  return randomPassword;
 
-}
-function refreshPage(){
-  location.reload()
-}
+} 
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-refreshBtn.addEventListener("click", refreshPage)
+
