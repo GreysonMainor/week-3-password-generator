@@ -28,7 +28,7 @@ function generatePassword() {
   var uppercase = confirm("Do you want uppercase letters in your password?");
   if (uppercase) {
     alert("Adding uppercase letters to the password.");
-    passGen += uppercaseChar
+    (passGen += uppercaseChar)
   } else {
     alert("No uppercase letters will be added.");
   }
@@ -36,7 +36,7 @@ function generatePassword() {
   var lowercase = confirm("Do you want lowercase letters in your password?");
   if (lowercase) {
     alert("Adding lowercase letters to your password.");
-    passGen += lowercaseChar
+    (passGen += lowercaseChar)
   } else {
     alert("No lowercase letters will be added.");
   }
@@ -44,7 +44,7 @@ function generatePassword() {
   var special = confirm("Do you want special characters in your password?");
   if (special) {
     alert("Adding special characters to your password!");
-    passGen += specialChar
+    (passGen += specialChar)
   } else {
     alert("No special characters will be added to your password.");
   }
@@ -52,7 +52,7 @@ function generatePassword() {
   var numbers = confirm("Do you want numbers in your password?");
   if (numbers) {
     alert("Adding numbers to your password!");
-    passGen += numbersChar
+    (passGen += numbersChar)
   } else {
     alert("No numbers will be added to your password.");
   }
@@ -68,14 +68,13 @@ function generatePassword() {
 
   //for function that actually adds all of my appropriate characters together at
   randomPassword = ""
-  
   for (i = 0; i < passwordLength; i++) {
     randomPassword += passGen.charAt(Math.floor(Math.random() * passGen.length))
   }
-
+  passGen = ""
   return randomPassword;
 
-} 
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
