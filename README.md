@@ -1,1 +1,3 @@
 # week-3-password-generator
+
+my motivation for this project was to gain a better understanding of javascript.  I wanted to learn how to run functions as well as return requested variables to the user.  I built this project to give a user a randomly generated password based of off parameters given by the user.  This allows the user to have more control.  This also allows me as the coder to have a better understanding of the relationship between user prompts and the end result.  This code allows for user's to choose between lowercase and uppercase letters, numbers, and special characters to generate a password.  This project helped me learn a lot more about for loops.  It also shed a lot of light on concatination, a process that i had previously struggled with. 
